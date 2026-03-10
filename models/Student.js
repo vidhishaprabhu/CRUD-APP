@@ -9,7 +9,7 @@ const studentSchema=new mongoose.Schema({
     required:true
   },
   email:{
-    type:Number,
+    type:String,
     required:true,
     unique:true
   },
@@ -30,3 +30,5 @@ const studentSchema=new mongoose.Schema({
   timestamps:true
 }
 )
+const Student=mongoose.model("Student",studentSchema);
+module.exports=Student
